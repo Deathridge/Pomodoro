@@ -1,0 +1,50 @@
+.tomato {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: red;
+  height:50vh;
+  width:50vh;
+  margin: 0 auto;
+  text-align:center;
+  padding-top:2%;
+}
+
+.tomato-padding {
+  padding-top:10%;
+}
+
+.tomato-block {
+  text-align:center;
+}
+
+#tomato-time {
+  padding-top:5%;
+  font-size: 10em;
+}
+
+.timer-block {
+  text-align:center;
+  display:inline;
+  
+}
+
+.break-timer {
+  display:inline;
+  list-style: none;
+  font-size: 2em;
+  padding-left:0px;
+}
+
+.break-timer li {
+  display:inline;
+}
+
+.session-timer{
+  display:inline;
+  list-style:none;
+  font-size: 2em;
+}
+
+.session-timer li {
+  display:inline;
+}
