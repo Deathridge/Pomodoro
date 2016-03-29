@@ -56,9 +56,9 @@ document.getElementById("session-minus").addEventListener("click", function(even
 var seconds = 60;
 
 
-document.getElementById("tomato-time").addEventListener("click", function(event) {
-  document.getElementById("tomato-time").style['font-size'] = '8em';
-  document.getElementById("tomato-time").style['padding-top'] = '10%';
+document.getElementById("tomato-block").addEventListener("click", function(event) {
+  document.getElementById("tomato-time").style['font-size'] = '7em';
+  document.getElementById("tomato-time").style['padding-top'] = '15%';
   if (runningSession !="finished" && (!runningSession || runningSession == "paused")) {
     if (session >= 1 ) {
       var tempSession = session;
