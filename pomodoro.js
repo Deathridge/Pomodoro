@@ -81,6 +81,7 @@ document.getElementById("tomato-time").addEventListener("click", function(event)
   
   if(runningSession == "finished" && (runningBreak == "paused" || !runningBreak)){
     if (breaktime >= 1 ) {
+      var tempBreak = breaktime;
       if(runningBreak != "paused"){
         breaktime -= 1;
       }          
@@ -88,7 +89,7 @@ document.getElementById("tomato-time").addEventListener("click", function(event)
     if(seconds != 60){
       document.getElementById("tomato-time").innerHTML = breaktime + ":" + seconds;
     }else{
-      document.getElementById("tomato-time").innerHTML = breaktime + ":00";
+      document.getElementById("tomato-time").innerHTML = tempBreak + ":00";
     }
     runningBreak = setTimeout(nextSecondBreak, 1000);
   }else if (runningSession == "finished"){
@@ -114,11 +115,12 @@ function nextSecond() {
   } else {
     seconds = 60;
     if (session > 0) {
+      var tempSession = session;
       session -= 1;
       if(seconds != 60){
         document.getElementById("tomato-time").innerHTML = session + ":" + seconds;
       }else{
-        document.getElementById("tomato-time").innerHTML = session + ":00";
+        document.getElementById("tomato-time").innerHTML = tempSession + ":00";
       }
       runningSession = setTimeout(nextSecond, 1000);
     } else {
@@ -156,11 +158,12 @@ function nextSecondBreak() {
   } else {
     seconds = 60;
     if (breaktime > 0) {
+      var tempBreak = breaktime;
       breaktime -= 1;
       if(seconds != 60){
         document.getElementById("tomato-time").innerHTML = breaktime + ":" + seconds;
       }else{
-        document.getElementById("tomato-time").innerHTML = breaktime + ":00";
+        document.getElementById("tomato-time").innerHTML = tempBreak + ":00";
       }
       runningBreak = setTimeout(nextSecondBreak, 1000);
     } else {
